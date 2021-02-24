@@ -1,0 +1,89 @@
+$desktop-pics-paddings: (
+  null: (50px, 0, 50px, 0),
+  small: (60px, 0, 60px, 0),
+  medium: (68px, 0, 68px, 0),
+);
+
+.desktop-pics {
+  @include element-indent($desktop-pics-paddings, 'padding');
+
+  background-color: #000;
+  color: #fff;
+
+  &__inner {
+    padding-top: 30px;
+    background-color: rgba(#fff, 0.09);
+  }
+
+  .two-colls {
+    position: relative;
+    z-index: 11;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-top: 76%;
+    margin-top: 20px;
+    z-index: 10;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    max-width: 416px;
+    margin-left: 0;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+    max-width: 416px;
+    margin-left: 0;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  svg {
+    margin-left: 0;
+  }
+
+  img {
+    position: absolute;
+    width: 165%;
+    bottom: 0;
+    right: 0;
+    object-position: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-pics {
+    .title {
+      margin-left: 30px;
+    }
+
+    .subtitle {
+      margin-left: 30px;
+    }
+
+    svg {
+      margin-left: 30px;
+    }
+
+    &__image {
+      padding-top: 547px;
+    }
+
+    img {
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .desktop-pics {
+    &__image {
+      margin-top: -30px;
+    }
+  }
+}
