@@ -3,30 +3,18 @@
     .two-colls
       .two-colls__item(style='display: flex; flex-direction: column;')
         .vertically_centered(style='flex-grow: 1;')
-          h1.title_big New style for your Instagram in one bundle
-          p.hero__subtitle Turn your Instagram profile to a brand new side with ready-to-use posts and stories
+          .hero__tag-container
+            p.tag_light Figma
+            p.tag_light Html
+            p.tag_light CSS
+          h1.title_big Catchy emails made simple.
+          p.hero__subtitle A new path in newsletter design. <br> 20 email templates about the most readable topics
           .hero__button-group 
-            a.button(href="#buy") Get 240 templates 
-            include ../svg/tools
-        .hero__footer-text 4 packs, 120 posts, 120 stories
+            a.button(href="#buy") Purchase for $28
+            a.button_black(href="#buy") Get Demo for Free
       .two-colls__item.overflow-hidden
-        .masonry
-          .masonry__col
-            each val in [1, 2, 3]
-              .masonry__item
-                - var image_name = 'Image' + val
-                - var path_name = 'images/hero/'
-                include picture_nolazy
-          .masonry__col
-            each val in [4, 5, 6]
-              .masonry__item
-                - var image_name = 'Image' + val
-                - var path_name = 'images/hero/'
-                include picture_nolazy
-          .masonry__col
-            each val in [7, 8, 9]
-              .masonry__item
-                - var image_name = 'Image' + val
-                - var path_name = 'images/hero/'
-                include picture_nolazy            
+        - var image_name = 'Image1'
+        - var path_name = 'images/hero/'
+        - var class_name = 'hero__image'
+        include picture_nolazy_with_class
 

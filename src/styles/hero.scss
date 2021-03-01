@@ -4,10 +4,30 @@ $hero__subtitle-font-sizes: (
   medium: (21px, 140%, -0.03em),
 );
 
+$hero-tag-container-margins: (
+  null: (0, 0, 25px, 0),
+  small: (0, 0, 28px, 0),
+  medium: (0, 0, 36px, 0),
+);
+
 .hero {
   background-color: #000;
   color: #fff;
   padding: 120px 0 0 0;
+
+  &__tag-container {
+    @include element-indent($hero-tag-container-margins, 'margin');
+
+    display: flex;
+
+    .tag {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 
   .title_big {
     max-width: 427px;
@@ -29,6 +49,12 @@ $hero__subtitle-font-sizes: (
 
     .button {
       width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     svg {
@@ -45,13 +71,29 @@ $hero__subtitle-font-sizes: (
     margin-top: 40px;
     margin-bottom: 0;
   }
+
+  picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    width: 100%;
+  }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 420px) {
   .hero {
     &__button-group {
       .button {
         width: auto;
+        margin-right: 15px;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       svg {

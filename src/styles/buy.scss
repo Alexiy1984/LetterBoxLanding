@@ -25,6 +25,10 @@ $buy-title-font-sizes: (
 .buy {
   @include element-indent($buy-paddings, 'padding');
 
+  .purchase-card {
+    height: 100%;
+  }
+
   &__inner {
     max-width: 1016px;
     margin: 0 auto;
@@ -50,6 +54,7 @@ $buy-title-font-sizes: (
 
       background-color: #000;
       color: #fff;
+      border-radius: 15px;
     }
   }
 
@@ -70,6 +75,10 @@ $buy-title-font-sizes: (
 
       margin-right: 0;
       order: 1;
+
+      &.mr-sm-30 {
+        margin-right: 30px;
+      }
     }
 
     &_center {
@@ -98,6 +107,16 @@ $buy-title-font-sizes: (
       margin-bottom: 15px;
     }
   }
+
+  &__democol {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &__buycol {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 @media (min-width: 540px) {
@@ -108,8 +127,16 @@ $buy-title-font-sizes: (
       &_left {
         margin-right: 30px;
 
+        .simple-card {
+          padding-right: 0;
+        }
+
         &.mr-md-0 {
           margin-right: 0;
+
+          .simple-card {
+            padding-right: 30px;
+          }
         }
       }
 
@@ -118,6 +145,15 @@ $buy-title-font-sizes: (
         border-bottom: none;
         margin-bottom: 30px;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .buy {
+    &__buycol {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
   }
 }
@@ -133,6 +169,10 @@ $buy-title-font-sizes: (
 
         &.mr-md-0 {
           margin-right: 30px;
+
+          .simple-card {
+            padding-right: 0;
+          }
         }
       }
 
@@ -151,6 +191,16 @@ $buy-title-font-sizes: (
         width: calc(41.5% - 20px);
         order: 1;
       }
+    }
+
+    &__democol {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+
+    &__buycol {
+      grid-column-start: 2;
+      grid-column-end: 4;
     }
   }
 }

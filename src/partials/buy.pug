@@ -1,67 +1,51 @@
 .buy#buy
   .container
     .buy__inner
-      .buy__title Improve your Instagram profile with a single bundle
-      .buy__colls
-        .buy__coll_left
-          .pack-card
-            .pack-card__header
-              p Typist
-              p.pack-card__price $18
-            - var image_name = 'Image1'
-            - var path_name = 'images/buy/'
-            include picture
-            a.pack-card__button(href='https://craftwork.design/checkout?edd_action=add_to_cart&download_id=66371') Purchase for $18
-          .pack-card
-            .pack-card__header
-              p Rumor
-              p.pack-card__price $18
-            - var image_name = 'Image2'
-            - var path_name = 'images/buy/'
-            include picture
-            a.pack-card__button(href='https://craftwork.design/checkout?edd_action=add_to_cart&download_id=71991') Purchase for $18  
-        .buy__coll_center
+      .buy__title Send your emails with Letterbox
+      .three-two-one-grid
+        .buy__democol
           .purchase-card
-            .purchase-card__header
-              p.purchase-card__label All packs
-              p.purchase-card__price_old $72
-              p.purchase-card__price $38
             .purchase-card__body
-              p.purchase-card__title Instagram Templates Full Bundle  
+              p.tag Free
+              p.purchase-card__title Demo
+              p.purchase-card__subtitle Colorful and stylish way to show a message to your audience.
               ul.purchase-card__list
                 li
                   include ../svg/checkMark
-                  span Set of 4 template packages
+                  span 1 coded HMTL template
                 li
                   include ../svg/checkMark
-                  span 120 posts & 120 stories
+                  span Figma source
                 li
                   include ../svg/checkMark
-                  span Free Google fonts
-                li
-                  include ../svg/checkMark
-                  span Figma, Sketch, Adobe XD
-                li
-                  include ../svg/checkMark
-                  span Personal & Commercial license
-              a.button_black(href='https://craftwork.design/checkout?edd_action=add_to_cart&download_id=118440') Purchase for $38          
-        .buy__coll_right
-          .pack-card
-            .pack-card__header
-              p Serpent
-              p.pack-card__price $18
-            - var image_name = 'Image3'
-            - var path_name = 'images/buy/'
-            include picture
-            a.pack-card__button(href='https://craftwork.design/checkout?edd_action=add_to_cart&download_id=79768') Purchase for $18
-          .pack-card
-            .pack-card__header
-              p Electro
-              p.pack-card__price $18
-            - var image_name = 'Image4'
-            - var path_name = 'images/buy/'
-            include picture
-            a.pack-card__button(href='https://craftwork.design/checkout?edd_action=add_to_cart&download_id=102919') Purchase for $18 
+                  span Only for personal use
+              a.button_outline(href='') Try for Free   
+        .buy__buycol
+          .purchase-card
+            .purchase-card__body
+              .purchase-card__two-colls
+                .purchase-card__two-colls__collumn
+                  p.tag $28 
+                  p.purchase-card__title Letterbox
+                  p.purchase-card__subtitle Colorful and stylish way to show a message to your audience.
+                  ul.purchase-card__list
+                    li
+                      include ../svg/checkMark
+                      span Set of 10 email templates
+                    li
+                      include ../svg/checkMark
+                      span Coded HTML templates
+                    li
+                      include ../svg/checkMark
+                      span Personal & Commercial license
+                    li
+                      include ../svg/checkMark
+                      span Figma design sources
+                  a.button(href='') Get Letterbox for $28
+                .purchase-card__two-colls__collumn
+                  - var image_name = 'Image1'
+                  - var path_name = 'images/buy/'
+                  include picture
       .buy__colls_black
         .buy__coll_left.buy__coll_mobile-bottom-line
           .simple-card
