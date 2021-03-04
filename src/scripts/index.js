@@ -57,6 +57,9 @@ $(function() {
         });
       }
     }
+  })
+  .on('mouseenter touchstart touchend', function() {
+    lazyLoadInstance.loadAll();
   });
 });
 

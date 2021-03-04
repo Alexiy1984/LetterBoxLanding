@@ -1,8 +1,11 @@
 $mobile-card-image-margins: (
-  null: (25px, auto, 0, auto),
-  small: (30px, auto, 0, auto),
-  medium: (35px, auto, 0, auto),
+  null: (-2%, auto, 0, auto),
+  small: (-20px, auto, 0, auto),
+  medium: (-5px, auto, 0, auto),
 );
+
+$title-max-width: 343px;
+$subtitle-max-width: 420px;
 
 .mobile-card {
   width: 100%;
@@ -13,14 +16,13 @@ $mobile-card-image-margins: (
   overflow: hidden;
 
   .title_small {
-    max-width: 405px;
+    max-width: $title-max-width;
     margin-bottom: 10px;
   }
 
   .subtitle {
-    max-width: 343px;
+    max-width: $subtitle-max-width;
     color: rgba(#fff, 0.55);
-    margin-bottom: 20px;
   }
 
   &__tag {

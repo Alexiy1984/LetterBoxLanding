@@ -39,7 +39,6 @@ $buy-title-font-sizes: (
     @include element-indent($buy-title-margins, 'margin');
 
     text-align: center;
-    max-width: 857px;
     font-weight: 500;
   }
 
