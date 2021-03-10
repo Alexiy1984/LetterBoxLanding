@@ -32,14 +32,13 @@
   }
 
   &__section {
-    flex: 1;
-
     &:nth-child(1n) {
       text-align: left;
     }
 
     &:nth-child(2n) {
       text-align: left;
+      flex: 1;
 
       .header__link {
         justify-content: flex-start;
@@ -117,6 +116,8 @@
     }
 
     &__section {
+      flex: 1;
+
       &:nth-child(1n) {
         text-align: left;
       }
